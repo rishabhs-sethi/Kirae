@@ -278,8 +278,8 @@ header
 
 .header-area .main-nav .logo {
   line-height: 80px;
-  color: #191a20;
-  font-size: 28px;
+  color: #0f0bfb;
+  font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -874,7 +874,7 @@ testimonials
 
 #testimonials .item .testimonial-content {
   background: rgb(244,129,63);
-  background: linear-gradient(145deg, rgba(244,129,63,1) 0%, rgba(241,85,106,1) 100%);
+  background: linear-gradient(145deg, rgb(63 77 244) 0%, rgb(119 85 241) 100%);
   margin-left: 60px;
   padding: 40px 30px;
   text-align: center;
@@ -928,7 +928,7 @@ testimonials
   text-align: center;
   display: inline-block;
   background: rgb(244,129,63);
-  background: linear-gradient(145deg, rgba(244,129,63,1) 0%, rgba(241,85,106,1) 100%);
+  background: linear-gradient(145deg, rgb(63 77 244) 0%, rgb(119 85 241) 100%);
   position: absolute;
 }
 
@@ -945,7 +945,7 @@ testimonials
   text-align: center;
   display: inline-block;
   background: rgb(244,129,63);
-  background: linear-gradient(145deg, rgba(244,129,63,1) 0%, rgba(241,85,106,1) 100%);
+  background: linear-gradient(145deg, rgb(63 77 244) 0%, rgb(119 85 241) 100%);
   position: absolute;
 }
 
