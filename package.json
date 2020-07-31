@@ -1,0 +1,17 @@
+{
+  "name": "kirae",
+  "version": "1.0.0",
+  "description": "kirae",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass --no-source-map --style=compressed assets/scss/style.scss:assets/css/main.css",
+    "start": "sass --no-source-map --style=compressed assets/scss/style.scss:assets/css/main.css --watch",
+    "stylelint": "stylelint \"scss/**/*.{css,scss,sass}\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.26.9"
+  },
+  "homepage": "https://github.com/rishabhs-sethi/Kirae#readme"
+}
