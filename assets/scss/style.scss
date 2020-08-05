@@ -591,6 +591,9 @@ html[xmlns] {
 hgroup {
 	display: block;
 }
+.counterValue {
+	display: none !important;
+}
 // &::selection {
 // 	background: #55b0f1;
 // 	color: #fff;

@@ -77,6 +77,7 @@
   });
 
   $(document).ready(function () {
+
     $('a[href^="#welcome"]').addClass("active");
 
     // send email code
