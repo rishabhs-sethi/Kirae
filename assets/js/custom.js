@@ -86,6 +86,8 @@
 
       var nameValue = $("#name").val(),
         emailValue = $("#email").val(),
+        phoneNumberValue = $("#phonenumber").val(),
+        locationValue = $("#location").val(),
         messageValue = $("#message").val();
 
       var dataForEmail = {
@@ -96,44 +98,12 @@
           nameValue: nameValue,
           emailValue: emailValue,
           messageValue: messageValue,
+          phoneNumberValue: phoneNumberValue,
+          locationValue: locationValue
         },
       };
 	  $('.contact-form').text("Your details have been submitted successfully.");
-      if (nameValue !== "" && emailValue !== "" && messageValue !== "" && false) {
-        $.ajax("https://api.emailjs.com/api/v1.0/email/send", {
-          type: "POST",
-          data: JSON.stringify(dataForEmail),
-          contentType: "application/json",
-        })
-          .done(function () {
-            $('.contact-form').text("Your details have been submitted successfully.");
-          })
-          .fail(function (error) {
-            alert("Oops... " + JSON.stringify(error));
-          });
-      }
-    });
-
-     // send email code
-    $("#form-submit").on("click", function (event) {
-      event.preventDefault(); // prevent reload
-
-      var nameValue = $("#name").val(),
-        emailValue = $("#email").val(),
-        messageValue = $("#message").val();
-
-      var dataForEmail = {
-        service_id: "gmail",
-        template_id: "template_1gEQSrCS",
-        user_id: "user_pOF5SV7eKB5kQc9kKGB7t",
-        template_params: {
-          nameValue: nameValue,
-          emailValue: emailValue,
-          messageValue: messageValue,
-        },
-      };
-	  $('.contact-form').text("Your details have been submitted successfully.");
-      if (nameValue !== "" && emailValue !== "" && messageValue !== "" && false) {
+      if (nameValue !== "" && emailValue !== "" && messageValue !== ""  && locationValue !== "" && phoneNumberValue !== "" && false) {
         $.ajax("https://api.emailjs.com/api/v1.0/email/send", {
           type: "POST",
           data: JSON.stringify(dataForEmail),
