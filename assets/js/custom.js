@@ -144,8 +144,8 @@
           locationValue: locationValue
         },
       };
-      $('.contact-form').text("Your details have been submitted successfully.");
-      if (nameValue !== "" && emailValue !== "" && messageValue !== "" && locationValue !== "" && phoneNumberValue !== "" && false) {
+      if (nameValue !== "" && emailValue !== "" && messageValue !== "" && locationValue !== "" && phoneNumberValue !== "") {
+        $('.fill-details').addClass('d-none');
         $.ajax("https://api.emailjs.com/api/v1.0/email/send", {
             type: "POST",
             data: JSON.stringify(dataForEmail),
@@ -157,6 +157,8 @@
           .fail(function (error) {
             alert("Oops... " + JSON.stringify(error));
           });
+      } else {
+        $('.fill-details').removeClass('d-none');
       }
     });
 
