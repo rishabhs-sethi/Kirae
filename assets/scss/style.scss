@@ -1610,3 +1610,36 @@ button.main-button {
         margin-bottom: 0;
 	}
 }
+
+.btn-calculator,
+.btn-calculator-reset {
+	&.disabled {
+		
+		pointer-events: none;
+		opacity: 0.2;
+	
+	}
+}
+
+.container-btn-values {
+	margin-top: 20px;
+	display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+	width: 100%;
+	.btn-wrapper {
+
+	}
+}
+
+.d-none {
+	display: none;
+}
+
+.calculator-btn {
+	display: flex;
+    justify-content: space-between;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}

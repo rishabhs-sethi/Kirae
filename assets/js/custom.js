@@ -24,7 +24,7 @@
     var box = $(".header-text").height();
     var header = $("header").height();
 
-    if (scroll >= (box - header)/2) {
+    if (scroll >= (box - header) / 2) {
       $("header").addClass("background-header");
     } else {
       $("header").removeClass("background-header");
@@ -49,7 +49,7 @@
   $("a[href*=\\#]:not([href=\\#])").on("click", function () {
     if (
       location.pathname.replace(/^\//, "") ==
-        this.pathname.replace(/^\//, "") &&
+      this.pathname.replace(/^\//, "") &&
       location.hostname == this.hostname
     ) {
       var targetHash = this.hash;
@@ -61,8 +61,7 @@
           $(".menu-trigger").removeClass("active");
           $(".header-area .nav").slideUp(200);
         }
-        $("html,body").animate(
-          {
+        $("html,body").animate({
             scrollTop: target.offset().top,
           },
           700,
@@ -77,6 +76,49 @@
   });
 
   $(document).ready(function () {
+
+
+    var objButtonClick = {
+      init: function () {
+        $(".btn-calculator-value").keyup(function () {
+
+          var calculatorValue = $(this).val();
+          if (calculatorValue !== "" && calculatorValue !== "0") {
+            $('.btn-calculator').removeClass('disabled');
+          } else {
+            $('.btn-calculator').addClass('disabled');
+          }
+        });
+
+        $(".btn-calculator").on("click", function () {
+          var inputValue = $(".btn-calculator-value").val(),
+            deliveryFee = inputValue < 286 ? 45 : 35;
+          var usedValue1Month = (.5 * (.7 * inputValue) + deliveryFee).toFixed(2);
+          var usedValue3Month = (.55 * (.8 * inputValue) + (deliveryFee)).toFixed(2);
+          var usedValue6Month = (.6 * (.85 * inputValue) + (deliveryFee)).toFixed(2);
+          var newValue1Month = ((.7 * inputValue) + deliveryFee).toFixed(2);
+          var newValue2Month = ((.8 * inputValue) + deliveryFee).toFixed(2);
+          var newValue6Month = ((.85 * inputValue) + deliveryFee).toFixed(2);
+          $('.one-month-value-used').text(usedValue1Month);
+          $('.three-month-value-used').text(usedValue3Month);
+          $('.six-month-value-used').text(usedValue6Month);
+          $('.one-month-value-new').text(newValue1Month);
+          $('.three-month-value-new').text(newValue2Month);
+          $('.six-month-value-new').text(newValue6Month);
+          $('.container-btn-values').removeClass('d-none');
+          $('.btn-calculator-reset').removeClass('disabled');
+          $(this).addClass('disabled');
+        });
+
+        $(".btn-calculator-reset").on("click", function () {
+          $(this).addClass('disabled');
+          $('.container-btn-values').addClass('d-none');
+          $(".btn-calculator-value").val(0)
+        });
+      }
+    }
+
+    objButtonClick.init();
 
     $('a[href^="#welcome"]').addClass("active");
 
@@ -102,13 +144,13 @@
           locationValue: locationValue
         },
       };
-	  $('.contact-form').text("Your details have been submitted successfully.");
-      if (nameValue !== "" && emailValue !== "" && messageValue !== ""  && locationValue !== "" && phoneNumberValue !== "" && false) {
+      $('.contact-form').text("Your details have been submitted successfully.");
+      if (nameValue !== "" && emailValue !== "" && messageValue !== "" && locationValue !== "" && phoneNumberValue !== "" && false) {
         $.ajax("https://api.emailjs.com/api/v1.0/email/send", {
-          type: "POST",
-          data: JSON.stringify(dataForEmail),
-          contentType: "application/json",
-        })
+            type: "POST",
+            data: JSON.stringify(dataForEmail),
+            contentType: "application/json",
+          })
           .done(function () {
             $('.contact-form').text("Your details have been submitted successfully.");
           })
@@ -128,8 +170,7 @@
 
       $("html, body")
         .stop()
-        .animate(
-          {
+        .animate({
             scrollTop: $target.offset().top,
           },
           500,
@@ -266,8 +307,7 @@
       });
     }
 
-    $("#preloader").animate(
-      {
+    $("#preloader").animate({
         opacity: "0",
       },
       600,
