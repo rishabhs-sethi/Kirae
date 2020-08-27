@@ -321,7 +321,7 @@ https://templatemo.com/tm-540-lava-landing-page
                 </div>
             </div>
             <div class="calculator-btn">
-                <input class="btn-calculator-value" type="number" placeholder="Enter a Value">
+                <input class="btn-calculator-value" type="text" maxlength="5" oninput="this.value=this.value.replace(/[^0-9]/g,'');"  placeholder="Enter a Value">
                 <button class="btn-calculator disabled" type="button" value="">Get Value</button>
                 <button class="btn-calculator-reset disabled" type="button" value="">Reset</button>
             </div>
