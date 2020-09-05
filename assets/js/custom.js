@@ -24,7 +24,7 @@
     var box = $(".header-text").height();
     var header = $("header").height();
 
-    if (scroll >= (box - header) / 2) {
+    if (scroll >= (box - header) / 2 || scroll <= 100) {
       $("header").addClass("background-header");
     } else {
       $("header").removeClass("background-header");
@@ -186,7 +186,7 @@
     });
 
     $(window).scroll(function (event) {
-      var scrollPos = $(document).scrollTop() + 80;
+      var scrollPos = $(document).scrollTop();
 
       if (scrollPos === 0) {
         $('a[href^="#welcome"]').addClass("active");
