@@ -1134,7 +1134,7 @@ button.main-button {
 		position: relative;
 		.testimonial-content {
 			background: rgb(244, 129, 63);
-			background: linear-gradient(145deg, rgb(63 77 244) 0%, rgb(119 85 241) 100%);
+			background: linear-gradient(145deg, #00317d 0%, #4c9bd2 100%);
 			margin-left: 60px;
 			padding: 40px 40px;
 			text-align: center;
@@ -1191,6 +1191,7 @@ button.main-button {
 				display: inline-block;
 				background: rgb(244, 129, 63);
 				background: linear-gradient(145deg, rgb(63 77 244) 0%, rgb(119 85 241) 100%);
+				background: linear-gradient(145deg, rgb(0, 49, 125) 0%, rgb(76, 155, 210) 100%);
 				position: absolute;
 			}
 		}
@@ -1355,6 +1356,7 @@ button.main-button {
 			transform: translateY(-50%);
 			// background: linear-gradient(145deg, rgb(63 236 244) 0%, rgb(85 112 241) 100%);
 			background: linear-gradient(145deg, #00317d 0%, rgb(119, 85, 241) 100%);
+			background: linear-gradient(145deg, rgb(0, 49, 125) 0%, rgb(76, 155, 210) 100%);
 		}
 	}
 	.owl-carousel.owl-loaded {
