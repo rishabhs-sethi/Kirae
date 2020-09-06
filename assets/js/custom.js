@@ -144,7 +144,7 @@
           locationValue: locationValue
         },
       };
-      if (nameValue !== "" && emailValue !== "" && messageValue !== "" && locationValue !== "" && phoneNumberValue !== "") {
+      if (nameValue !== "" && emailValue !== "" && messageValue !== ""  && phoneNumberValue !== "") {
         $('.fill-details').addClass('d-none');
         $.ajax("https://api.emailjs.com/api/v1.0/email/send", {
             type: "POST",
@@ -152,7 +152,7 @@
             contentType: "application/json",
           })
           .done(function () {
-            $('.contact-form').text("Your details have been submitted successfully.");
+            $('.contact-form').text("Your details have been submitted successfully. To submit another request or inquiry, PLEASE REFRESH!");
           })
           .fail(function (error) {
             alert("Oops... " + JSON.stringify(error));
