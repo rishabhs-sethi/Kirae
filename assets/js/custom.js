@@ -24,7 +24,7 @@
     var box = $(".header-text").height();
     var header = $("header").height();
 
-    if (scroll >= (box - header) / 2 || scroll <= 100) {
+    if (scroll >= (box - header) / 2 || scroll <= 50) {
       $("header").addClass("background-header");
     } else {
       $("header").removeClass("background-header");
@@ -169,7 +169,9 @@
       var target = this.hash,
         menu = target;
       var $target = $(target);
-
+      if (target=="#welcome") {
+        document.documentElement.classList.add("aaaaaaaaaaaaaaaaa")
+      }
       $("html, body")
         .stop()
         .animate({
@@ -186,7 +188,7 @@
     });
 
     $(window).scroll(function (event) {
-      var scrollPos = $(document).scrollTop();
+      var scrollPos = $(document).scrollTop() + 80;
 
       if (scrollPos === 0) {
         $('a[href^="#welcome"]').addClass("active");

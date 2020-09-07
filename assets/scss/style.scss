@@ -1015,7 +1015,7 @@ button.main-button {
 			position: relative;
 			align-self: center;
 			margin-top: 0%;
-			transform: perspective(1px) translateY(-30%) !important;
+			// transform: perspective(1px) translateY(-30%) !important;
 		}
 		h1 {
 			font-weight: 900;
@@ -1686,3 +1686,6 @@ button.main-button {
 	text-align: justify; 
 }
 
+.aaaaaaaaaaaaaaaaa .background-header + #welcome {
+    margin-top: 100px;
+}
