@@ -145,6 +145,7 @@
         },
       };
       if (nameValue !== "" && emailValue !== "" && messageValue !== ""  && phoneNumberValue !== "") {
+        
         $('.fill-details').addClass('d-none');
         $.ajax("https://api.emailjs.com/api/v1.0/email/send", {
             type: "POST",
@@ -339,3 +340,14 @@
     });
   }
 })(window.jQuery);
+
+function ValidateEmail(obj) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(obj.value))
+  {
+    return (true)
+  }
+    $(obj).val(""); 
+    alert("You have entered an invalid email address!")
+    return (false)
+}
