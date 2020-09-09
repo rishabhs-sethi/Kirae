@@ -1003,10 +1003,15 @@ button.main-button {
 		}
 	}
 }
+
+.background-header + .welcome-area {
+		margin-top: 100px;
+}
 .welcome-area {
 	width: 100%;
 	height: 50vh;
 	min-height: 600px;
+	
 	background-image: url(../images/book.jpg);
 	background-repeat: no-repeat;
 	background-position: right top;
