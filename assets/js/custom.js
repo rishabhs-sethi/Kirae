@@ -24,7 +24,7 @@
     var box = $(".header-text").height();
     var header = $("header").height();
 
-    if (scroll >= (box - header) / 2 || scroll <= 50) {
+    if (scroll >= (box - header) || scroll <= 100) {
       $("header").addClass("background-header");
     } else {
       $("header").removeClass("background-header");
@@ -170,13 +170,10 @@
       var target = this.hash,
         menu = target;
       var $target = $(target);
-      if (target=="#welcome") {
-        document.documentElement.classList.add("aaaaaaaaaaaaaaaaa")
-      }
       $("html, body")
         .stop()
         .animate({
-            scrollTop: $target.offset().top,
+            scrollTop: $target.offset().top - 100,
           },
           500,
           "swing",
