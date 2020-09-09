@@ -181,7 +181,7 @@
           500,
           "swing",
           function () {
-            window.location.hash = target;
+            // window.location.hash = target;
             $(".menu-item").removeClass("active");
             $(athis).addClass("active");
           }
