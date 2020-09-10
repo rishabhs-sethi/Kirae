@@ -1571,6 +1571,7 @@ button.main-button {
 			.left-text {
 				margin-top: 5%;
 				transform: none !important;
+				min-width: 90%;
 			}
 		}
 	}
@@ -1579,7 +1580,7 @@ button.main-button {
 	.welcome-area {
 		background-size: contain;
 		.header-text {
-			padding-top: 80%;
+			padding-top: 70%;
 			margin-left: 0;
 		}
 	}
