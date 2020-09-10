@@ -1555,7 +1555,7 @@ button.main-button {
 	.welcome-area {
 		.header-text {
 			.left-text {
-				margin-top: 50%;
+				// margin-top: 50%;
 			}
 			width: 50%;
 			margin-left: 5%;
@@ -1575,7 +1575,7 @@ button.main-button {
 		}
 	}
 }
-@media (max-width: 810px) {
+@media (max-width: 1050px) {
 	.welcome-area {
 		background-size: contain;
 		.header-text {
