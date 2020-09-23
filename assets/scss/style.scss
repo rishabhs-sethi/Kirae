@@ -1012,7 +1012,7 @@ button.main-button {
 	height: 50vh;
 	min-height: 600px;
 	
-	background-image: url(../images/book.jpg);
+	background-image: url(../images/order.gif);
 	background-repeat: no-repeat;
 	background-position: right top;
 	.header-text {
@@ -1036,9 +1036,9 @@ button.main-button {
 		}
 		p {
 			font-weight: 300;
-			font-size: 17px;
+			font-size: 15px;
 			color: #7a7a7a;
-			line-height: 30px;
+			line-height: 25px;
 			letter-spacing: 0.25px;
 			margin-bottom: 40px;
 			position: relative;
@@ -1243,7 +1243,7 @@ button.main-button {
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
 	textarea {
 		color: #777;
@@ -1347,7 +1347,7 @@ button.main-button {
 #blogs {
 	.owl-prev {
 		span {
-			left: -50px;
+			left: -60px;
 			top: 50%;
 			transform: translateY(-50%);
 			right: 0;
@@ -1357,7 +1357,7 @@ button.main-button {
 	}
 	.owl-next {
 		span {
-			right: -50px;
+			right: -60px;
 			top: 50%;
 			transform: translateY(-50%);
 			// background: linear-gradient(145deg, rgb(63 236 244) 0%, rgb(85 112 241) 100%);
@@ -1625,7 +1625,7 @@ button.main-button {
     box-sizing: border-box;
     margin-bottom: -1px;
     width: 100%;
-    padding: 120px 24px 50px 24px;
+    padding: 170px 24px 35px 24px;
     clear: both;
     overflow: hidden;
     display: flex;
@@ -1633,7 +1633,8 @@ button.main-button {
 	justify-content: center;
 	.post-title {
 		color: #ffffff;
-        font: 400 48px Dancing Script, cursive;
+		font-size: 40px;
+		font-weight: 700;
         line-height: 1.41667;
         margin-bottom: 0;
 	}

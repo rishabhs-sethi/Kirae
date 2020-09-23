@@ -145,7 +145,8 @@
         },
       };
       if (nameValue !== "" && emailValue !== "" && messageValue !== ""  && phoneNumberValue !== "") {
-        
+       
+
         $('.fill-details').addClass('d-none');
         $.ajax("https://api.emailjs.com/api/v1.0/email/send", {
             type: "POST",
@@ -340,11 +341,16 @@
 
 function ValidateEmail(obj) 
 {
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(obj.value))
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(obj.value) || $(obj).val() == "")
   {
+    $('.email-details').addClass('d-none');
     return (true)
   }
-    $(obj).val(""); 
-    alert("You have entered an invalid email address!")
+    $('.email-details').removeClass('d-none');
     return (false)
+}
+
+function RemoveValidation() 
+{
+  $('.fill-details').addClass('d-none');
 }
